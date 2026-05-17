@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact Us | WebCraft Studio</title>
+  <meta name="description" content="Get in touch with WebCraft Studio. Email, phone, or WhatsApp — we reply within 24 hours."/>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="inner.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">WC</div><div class="loader-track"><div class="loader-fill"></div></div></div>
+<div id="nav-placeholder"></div>
+<main>
+
+<section class="page-hero">
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center">Let's Talk</div>
+    <h1 class="section-heading reveal">Start Your <span class="gradient-text">Project Today</span></h1>
+    <p class="section-lead reveal" style="margin:1rem auto 0;text-align:center">We respond within 24 hours. Tell us about your business and what you need.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Info column -->
+      <div class="contact-info">
+        <div class="eyebrow reveal">Reach Out</div>
+        <h2 class="section-heading reveal" style="font-size:clamp(2rem,4vw,3rem)">We'd Love to <span class="gradient-text">Hear From You</span></h2>
+        <p class="section-lead reveal" style="margin-bottom:2.5rem">Whether you're ready to start or just have questions — get in touch and we'll help you figure out the best solution.</p>
+
+        <div class="contact-methods">
+          <a href="mailto:griesel050@gmail.com" class="cm-card card reveal">
+            <div class="cm-icon"><i class="fas fa-envelope"></i></div>
+            <div><span class="cm-label">Email</span><span class="cm-value">griesel050@gmail.com</span></div>
+          </a>
+          <a href="tel:+27816137187" class="cm-card card reveal delay-1">
+            <div class="cm-icon"><i class="fas fa-phone"></i></div>
+            <div><span class="cm-label">Phone / WhatsApp</span><span class="cm-value">+27 81 613 7187</span></div>
+          </a>
+          <div class="cm-card card reveal delay-2">
+            <div class="cm-icon"><i class="fas fa-clock"></i></div>
+            <div><span class="cm-label">Response Time</span><span class="cm-value">Within 24 hours</span></div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/27816137187?text=Hi!%20I%27d%20like%20a%20website%20for%20my%20business." class="btn-wa reveal" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Form column -->
+      <div class="contact-form-wrap card reveal">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="fg">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name"/>
+            </div>
+            <div class="fg">
+              <label for="biz">Business Name</label>
+              <input type="text" id="biz" name="biz" placeholder="My Business" autocomplete="organization"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/>
+            </div>
+            <div class="fg">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+27 81 234 5678" autocomplete="tel"/>
+            </div>
+          </div>
+          <div class="fg">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="business">New Business Website</option>
+              <option value="portfolio">Portfolio Website</option>
+              <option value="landing">Landing Page</option>
+              <option value="update">Website Update (R300)</option>
+              <option value="unsure">Not Sure — Help Me Decide</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="message">Tell Us About Your Project *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your business, what you need, any ideas you have…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> <span>Send Message</span>
+          </button>
+          <!-- Success message -->
+          <div id="form-success" class="form-success" style="display:none">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Message sent!</strong><br/>We'll get back to you within 24 hours.</div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../nav-footer.js"></script>
+<script src="../main.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

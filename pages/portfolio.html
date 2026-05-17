@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Portfolio | WebCraft Studio</title>
+  <meta name="description" content="See our recent web development projects — business websites, portfolios, and landing pages built for South African businesses."/>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="inner.css"/>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">WC</div><div class="loader-track"><div class="loader-fill"></div></div></div>
+<div id="nav-placeholder"></div>
+<main>
+
+<section class="page-hero">
+  <div class="page-hero-grid" aria-hidden="true"></div>
+  <div class="page-hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center">Our Work</div>
+    <h1 class="section-heading reveal">Recent <span class="gradient-text">Projects</span></h1>
+    <p class="section-lead reveal" style="margin:1rem auto 0;text-align:center">A selection of websites we've built for our clients.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+
+    <!-- Filter Buttons -->
+    <div class="port-filters reveal">
+      <button class="pf-btn active" data-f="all">All</button>
+      <button class="pf-btn" data-f="business">Business</button>
+      <button class="pf-btn" data-f="portfolio">Portfolio</button>
+      <button class="pf-btn" data-f="landing">Landing Page</button>
+    </div>
+
+    <!--
+    ============================================================
+    HOW TO ADD NEW PORTFOLIO ITEMS:
+    1. Copy a .port-card div below
+    2. Set data-cat to: business, portfolio, or landing
+    3. Set the background-image in .port-img style to your screenshot
+    4. Update the href in .port-link to the live URL
+    5. Update .port-type, h3, and p text
+    ============================================================
+    -->
+    <div class="port-grid" id="port-grid">
+
+      <!-- ITEM 1 — replace values below -->
+      <div class="port-card card reveal" data-cat="business">
+        <div class="port-img" style="background:linear-gradient(135deg,#0f1a40,#1e3a8a);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar"></div>
+            <div class="pm-h"></div>
+            <div class="pm-p"></div>
+            <div class="pm-cards"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Business</span>
+          <!-- Replace with real business name -->
+          <h3>Client Business Name</h3>
+          <!-- Replace with description -->
+          <p>A professional multi-page business website with service listings and integrated contact form.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="port-card card reveal delay-1" data-cat="portfolio">
+        <div class="port-img" style="background:linear-gradient(135deg,#1a0f2e,#4c1d95);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar"></div>
+            <div class="pm-gallery"><span></span><span></span><span></span><span></span></div>
+            <div class="pm-h"></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Portfolio</span>
+          <h3>Photography Portfolio</h3>
+          <p>An elegant portfolio site for a photographer with gallery grid and lightbox viewer.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="port-card card reveal delay-2" data-cat="landing">
+        <div class="port-img" style="background:linear-gradient(135deg,#0a1628,#0e4d92);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar accent"></div>
+            <div class="pm-h"></div>
+            <div class="pm-p"></div>
+            <div class="pm-btn"></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Landing Page</span>
+          <h3>Product Launch Page</h3>
+          <p>High-converting landing page for a product launch with lead capture and social proof.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="port-card card reveal" data-cat="business">
+        <div class="port-img" style="background:linear-gradient(135deg,#0d1f12,#14532d);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar"></div>
+            <div class="pm-h"></div>
+            <div class="pm-cards"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Business</span>
+          <h3>Restaurant Website</h3>
+          <p>A visually rich restaurant site with menu display, gallery, and reservation call-to-action.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="port-card card reveal delay-1" data-cat="portfolio">
+        <div class="port-img" style="background:linear-gradient(135deg,#1f1409,#78350f);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar accent"></div>
+            <div class="pm-gallery"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Portfolio</span>
+          <h3>Architect Portfolio</h3>
+          <p>Sleek editorial-style portfolio for an architect, showcasing projects with full-bleed imagery.</p>
+        </div>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="port-card card reveal delay-2" data-cat="landing">
+        <div class="port-img" style="background:linear-gradient(135deg,#1a0a28,#6d28d9);">
+          <div class="port-overlay">
+            <a href="#" class="port-link btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Site</a>
+          </div>
+          <div class="port-mock">
+            <div class="pm-bar accent"></div>
+            <div class="pm-h"></div>
+            <div class="pm-btn"></div>
+            <div class="pm-p"></div>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-type">Landing Page</span>
+          <h3>Service Promo Page</h3>
+          <p>Focused service page designed to drive inquiries with WhatsApp and email CTA buttons.</p>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           ADD MORE ITEMS HERE — copy a .port-card block above
+      ==================================================== -->
+
+    </div>
+  </div>
+</section>
+
+<section class="inner-cta">
+  <div class="wrap inner-cta-inner reveal">
+    <h2 class="section-heading">Want a Site <span class="gradient-text">Like These?</span></h2>
+    <p class="section-lead">Let's build something great for your business.</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:2rem"><i class="fas fa-rocket"></i> Start Your Project</a>
+  </div>
+</section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../nav-footer.js"></script>
+<script src="../main.js"></script>
+<script src="portfolio.js"></script>
+</body>
+</html>
