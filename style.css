@@ -1,5 +1,5 @@
 /* ================================================================
-   WebCraft Studio — Global Stylesheet
+   NexoSites — Global Stylesheet
    Theme: Dark luxury + electric blue/cyan, geometric, editorial
    ================================================================ */
 
@@ -524,4 +524,150 @@ body::before {
 }
 @media (max-width: 480px) {
   .wrap { padding: 0 1rem; }
+}
+
+/* ================================================================
+   NEXOSITES — Polish & Improvements
+   ================================================================ */
+
+/* Smoother loader logo sizing */
+.loader-logo {
+  font-size: 2rem;
+  letter-spacing: .2em;
+}
+
+/* Nav brand — tighter, cleaner */
+.nav-brand {
+  gap: .6rem;
+  font-size: 1.25rem;
+  letter-spacing: .1em;
+}
+.nav-brand-mark {
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+/* Glow line under active nav link */
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 50%; right: 50%;
+  height: 2px;
+  background: var(--grad);
+  border-radius: 2px;
+  transition: left .3s var(--ease), right .3s var(--ease);
+}
+.nav-link.active::after {
+  left: .9rem; right: .9rem;
+}
+
+/* Hover glow on cards */
+.card {
+  transition: border-color .3s, box-shadow .3s, transform .35s var(--ease);
+}
+.card:hover {
+  box-shadow: 0 0 0 1px rgba(37,99,235,.25), 0 20px 50px rgba(0,0,0,.4), 0 0 40px rgba(37,99,235,.1);
+}
+
+/* Smooth page-hero entrance */
+.page-hero .wrap > * {
+  animation: heroFadeUp .7s var(--ease) both;
+}
+.page-hero .wrap > *:nth-child(2) { animation-delay: .12s; }
+.page-hero .wrap > *:nth-child(3) { animation-delay: .22s; }
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Button shimmer effect */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s var(--ease);
+}
+.btn-primary:hover::before { left: 160%; }
+
+/* Mobile drawer links — stagger in */
+.mobile-drawer.open .nav-link {
+  animation: drawerLinkIn .4s var(--ease) both;
+}
+.mobile-drawer.open .nav-link:nth-child(1) { animation-delay: .05s; }
+.mobile-drawer.open .nav-link:nth-child(2) { animation-delay: .1s; }
+.mobile-drawer.open .nav-link:nth-child(3) { animation-delay: .15s; }
+.mobile-drawer.open .nav-link:nth-child(4) { animation-delay: .2s; }
+.mobile-drawer.open .nav-link:nth-child(5) { animation-delay: .25s; }
+.mobile-drawer.open .nav-link:nth-child(6) { animation-delay: .3s; }
+.mobile-drawer.open .nav-link:nth-child(7) { animation-delay: .35s; }
+@keyframes drawerLinkIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer link hover — slide right */
+.footer-col ul a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  transition: color .2s, gap .2s, padding-left .2s;
+}
+.footer-col ul a:hover { gap: .3rem; }
+
+/* WhatsApp button pulse ring */
+.wa-btn::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 99px;
+  background: rgba(37,211,102,.25);
+  animation: waPulse 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.wa-btn { position: relative; }
+@keyframes waPulse {
+  0%,100% { transform: scale(1); opacity: .6; }
+  50%      { transform: scale(1.12); opacity: 0; }
+}
+
+/* Scroll-reveal — slight left/right on alternating cards */
+.testi-card:nth-child(odd)  { transform: translateY(28px) translateX(-8px); }
+.testi-card:nth-child(even) { transform: translateY(28px) translateX(8px); }
+.testi-card.visible { transform: translateY(0) translateX(0); }
+
+/* Better focus rings sitewide */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Page transition fade */
+body { animation: pageFade .35s ease both; }
+@keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* Improve select dropdown arrow */
+.fg select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b92b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+/* Pricing card accent border glow */
+.price-card-accent {
+  box-shadow: 0 0 30px rgba(6,214,245,.08);
+}
+.price-card-accent:hover {
+  box-shadow: 0 0 50px rgba(6,214,245,.18);
 }
