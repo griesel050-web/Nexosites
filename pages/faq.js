@@ -8,4 +8,3 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     btn.setAttribute('aria-expanded', !isOpen);
   });
 });
- 
