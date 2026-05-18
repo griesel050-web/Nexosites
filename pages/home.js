@@ -21,3 +21,4 @@ if (counters.length) {
   }, { threshold: 0.5 });
   counters.forEach(c => io.observe(c));
 }
+ 
