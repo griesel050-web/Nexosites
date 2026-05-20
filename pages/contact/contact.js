@@ -40,11 +40,11 @@ form.addEventListener('submit', async e => {
   ─────────────────────────────────────────────────────────── */
 
   // Simulated success (remove timeout and use real fetch below)
-  await new Promise(r => setTimeout(r, 1500));
+  // await new Promise(r => setTimeout(r, 1500));
 
-  /*
+  
   // Real Formspree example:
-  const res = await fetch('https://formspree.io/f/YOUR_ID', {
+  const res = await fetch('https://formspree.io/f/xkoejrar', {
     method: 'POST',
     body: new FormData(form),
     headers: { Accept: 'application/json' }
@@ -55,7 +55,6 @@ form.addEventListener('submit', async e => {
     alert('Something went wrong. Email us directly at griesel050@gmail.com');
     return;
   }
-  */
 
   form.style.display = 'none';
   success.style.display = 'flex';
