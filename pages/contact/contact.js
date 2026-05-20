@@ -1,62 +1,68 @@
-/* contact.js — form validation + submission */
-const form    = document.getElementById('contact-form');
-const btn     = document.getElementById('submit-btn');
-const success = document.getElementById('form-success');
-if (!form) return;
+/* ================================================================
+   contact.js — NexoSites
+   Handles UI enhancements on top of Formspree SDK
+   ================================================================ */
 
-/* Clear red border on input */
-form.querySelectorAll('input,select,textarea').forEach(f => {
-  f.addEventListener('input', () => f.style.borderColor = '');
-});
+(function () {
+  const form      = document.getElementById('contact-form');
+  const submitBtn = form?.querySelector('[data-fs-submit-btn]');
+  const successEl = form?.parentElement?.querySelector('[data-fs-success]');
+  const errorEl   = form?.parentElement?.querySelector('[data-fs-error]');
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  let valid = true;
+  if (!form || !submitBtn) return;
 
-  /* Basic required check */
-  form.querySelectorAll('[required]').forEach(f => {
-    if (!f.value.trim()) { f.style.borderColor = '#ef4444'; valid = false; }
+  const btnLabel   = submitBtn.querySelector('.btn-label');
+  const btnSending = submitBtn.querySelector('.btn-sending');
+
+  /* ── Show spinner while submitting ─────────────────────────── */
+  form.addEventListener('submit', () => {
+    if (btnLabel)   btnLabel.style.display   = 'none';
+    if (btnSending) btnSending.style.display = 'inline-flex';
   });
 
-  /* Email format */
-  const em = form.querySelector('#email');
-  if (em && em.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) {
-    em.style.borderColor = '#ef4444'; valid = false;
-  }
+  /* ── Watch for SDK state changes via DOM mutations ──────────── */
+  const observer = new MutationObserver(() => {
 
-  if (!valid) return;
+    /* Success: SDK sets display:block on [data-fs-success] */
+    if (successEl && successEl.style.display !== 'none') {
+      form.style.display = 'none';           // hide the form
+      successEl.style.display = 'flex';      // ensure flex layout
+      if (btnLabel)   btnLabel.style.display   = 'inline';
+      if (btnSending) btnSending.style.display = 'none';
+    }
 
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending…';
+    /* Error: SDK sets display:block on [data-fs-error] */
+    if (errorEl && errorEl.style.display !== 'none') {
+      errorEl.style.display = 'flex';
+      if (btnLabel)   btnLabel.style.display   = 'inline';
+      if (btnSending) btnSending.style.display = 'none';
+      submitBtn.disabled = false;
+    }
 
-  /* ── TO ENABLE REAL EMAIL DELIVERY ────────────────────────
-     Option A — Formspree (free & easy):
-       1. Sign up at formspree.io
-       2. Create a form, copy your endpoint ID
-       3. Uncomment the fetch block below and replace YOUR_ID
-
-     Option B — EmailJS:
-       Follow emailjs.com setup and call their SDK here.
-  ─────────────────────────────────────────────────────────── */
-
-  // Simulated success (remove timeout and use real fetch below)
-  // await new Promise(r => setTimeout(r, 1500));
-
-  
-  // Real Formspree example:
-  const res = await fetch('https://formspree.io/f/xkoejrar', {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { Accept: 'application/json' }
+    /* Field errors: highlight red border on aria-invalid inputs */
+    form.querySelectorAll('[data-fs-field]').forEach(field => {
+      const invalid = field.getAttribute('aria-invalid') === 'true';
+      field.style.borderColor = invalid ? 'var(--pink)' : '';
+      field.style.boxShadow   = invalid ? '0 0 0 3px rgba(236,72,153,.18)' : '';
+    });
   });
-  if (!res.ok) {
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    alert('Something went wrong. Email us directly at griesel050@gmail.com');
-    return;
-  }
 
-  form.style.display = 'none';
-  success.style.display = 'flex';
-});
- 
+  /* Observe the whole form wrapper for any DOM/style changes */
+  const wrapper = form.closest('.contact-form-wrap') || form.parentElement;
+  observer.observe(wrapper, {
+    attributes: true,
+    attributeFilter: ['style'],
+    childList: true,
+    subtree: true
+  });
+
+  /* ── Clear field error styles on user input ─────────────────── */
+  form.querySelectorAll('[data-fs-field]').forEach(field => {
+    field.addEventListener('input', () => {
+      field.style.borderColor = '';
+      field.style.boxShadow   = '';
+      field.removeAttribute('aria-invalid');
+    });
+  });
+
+})();
