@@ -15,7 +15,7 @@ document.getElementById('nav-placeholder').innerHTML = `
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="${ROOT}/"           class="nav-link">Home</a></li>
+      <li><a href="${ROOT}https://nexosites.xyz"           class="nav-link">Home</a></li>
       <li><a href="${ROOT}pages/services/"  class="nav-link">Services</a></li>
       <li><a href="${ROOT}pages/portfolio/" class="nav-link">Portfolio</a></li>
       <li><a href="${ROOT}pages/pricing/"   class="nav-link">Pricing</a></li>
@@ -33,7 +33,7 @@ document.getElementById('nav-placeholder').innerHTML = `
 
 <div class="mob-menu" id="mob-menu" role="dialog" aria-modal="true" aria-label="Navigation" inert>
   <div class="mob-top">
-    <a href="${ROOT}index.html" class="nav-brand mob-brand">
+    <a href="${ROOT}https://nexosites.xyz" class="nav-brand mob-brand">
       <div class="nav-brand-mark">N</div>
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
@@ -42,7 +42,7 @@ document.getElementById('nav-placeholder').innerHTML = `
     </button>
   </div>
   <nav class="mob-nav" aria-label="Mobile navigation">
-    <a href="${ROOT}/"           class="mob-link"><span class="mob-num">01</span><span class="mob-label">Home</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="${ROOT}https://nexosites.xyz"           class="mob-link"><span class="mob-num">01</span><span class="mob-label">Home</span><i class="fas fa-arrow-right mob-arrow"></i></a>
     <a href="${ROOT}pages/services/"  class="mob-link"><span class="mob-num">02</span><span class="mob-label">Services</span><i class="fas fa-arrow-right mob-arrow"></i></a>
     <a href="${ROOT}pages/portfolio/" class="mob-link"><span class="mob-num">03</span><span class="mob-label">Portfolio</span><i class="fas fa-arrow-right mob-arrow"></i></a>
     <a href="${ROOT}pages/pricing/"   class="mob-link"><span class="mob-num">04</span><span class="mob-label">Pricing</span><i class="fas fa-arrow-right mob-arrow"></i></a>
@@ -77,14 +77,14 @@ document.getElementById('footer-placeholder').innerHTML = `
         <div class="footer-socials">
           <a href="https://discord.gg/fFQfgK3gqQ" class="social-btn" aria-label="Discord"><i class="fab fa-discord"></i></a>
           <a href="https://www.instagram.com/nxrealm08/" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="www.linkedin.com/in/NexoSites/" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/NexoSites/" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/27816137187" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
         <h5>Navigation</h5>
         <ul>
-          <li><a href="${ROOT}/">Home</a></li>
+          <li><a href="${ROOT}https://nexosites.xyz">Home</a></li>
           <li><a href="${ROOT}pages/services/">Services</a></li>
           <li><a href="${ROOT}pages/portfolio/">Portfolio</a></li>
           <li><a href="${ROOT}pages/pricing/">Pricing</a></li>
