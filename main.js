@@ -22,14 +22,10 @@ if (navbar) {
 
 /* ── ACTIVE NAV LINK ────────────────────────────────────────── */
 (() => {
-  const path = location.pathname.replace(/\/$/, ''); // strip trailing slash
+  const path = location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-link').forEach(a => {
-    const href = (a.getAttribute('href') || '').replace(/\/$/, '');
-    if (!href) return;
-    // Match by segment: e.g. href="pages/services/" matches pathname ending in /pages/services
-    if (path.endsWith(href.replace(/^\.\.\/|^\.\//g, ''))) {
-      a.classList.add('active');
-    }
+    const href = (a.getAttribute('href') || '').replace(/\/$/, '') || '/';
+    if (path === href) a.classList.add('active');
   });
 })();
 

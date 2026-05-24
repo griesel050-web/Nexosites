@@ -2,26 +2,22 @@
    nav-footer.js — NexoSites
    ================================================================ */
 
-const ROOT = (() => {
-  return location.pathname.includes('/pages/') ? '../' : './';
-})();
-
 /* ── NAV ──────────────────────────────────────────────────────── */
 document.getElementById('nav-placeholder').innerHTML = `
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="${ROOT}index.html" class="nav-brand" aria-label="NexoSites Home">
+    <a href="/" class="nav-brand" aria-label="NexoSites Home">
       <div class="nav-brand-mark">N</div>
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="${ROOT}index.html"           class="nav-link">Home</a></li>
-      <li><a href="${ROOT}pages/services/"  class="nav-link">Services</a></li>
-      <li><a href="${ROOT}pages/portfolio/" class="nav-link">Portfolio</a></li>
-      <li><a href="${ROOT}pages/pricing/"   class="nav-link">Pricing</a></li>
-      <li><a href="${ROOT}pages/about/"     class="nav-link">About</a></li>
-      <li><a href="${ROOT}pages/faq/"       class="nav-link">FAQ</a></li>
-      <li><a href="${ROOT}pages/contact/"   class="nav-link nav-cta">Get Started</a></li>
+      <li><a href="/"                    class="nav-link">Home</a></li>
+      <li><a href="/pages/services/"     class="nav-link">Services</a></li>
+      <li><a href="/pages/portfolio/"    class="nav-link">Portfolio</a></li>
+      <li><a href="/pages/pricing/"      class="nav-link">Pricing</a></li>
+      <li><a href="/pages/about/"        class="nav-link">About</a></li>
+      <li><a href="/pages/faq/"          class="nav-link">FAQ</a></li>
+      <li><a href="/pages/contact/"      class="nav-link nav-cta">Get Started</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span class="ham-bar"></span>
@@ -33,7 +29,7 @@ document.getElementById('nav-placeholder').innerHTML = `
 
 <div class="mob-menu" id="mob-menu" role="dialog" aria-modal="true" aria-label="Navigation" inert>
   <div class="mob-top">
-    <a href="${ROOT}index.html" class="nav-brand mob-brand">
+    <a href="/" class="nav-brand mob-brand">
       <div class="nav-brand-mark">N</div>
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
@@ -42,15 +38,15 @@ document.getElementById('nav-placeholder').innerHTML = `
     </button>
   </div>
   <nav class="mob-nav" aria-label="Mobile navigation">
-    <a href="${ROOT}index.html"           class="mob-link"><span class="mob-num">01</span><span class="mob-label">Home</span><i class="fas fa-arrow-right mob-arrow"></i></a>
-    <a href="${ROOT}pages/services/"  class="mob-link"><span class="mob-num">02</span><span class="mob-label">Services</span><i class="fas fa-arrow-right mob-arrow"></i></a>
-    <a href="${ROOT}pages/portfolio/" class="mob-link"><span class="mob-num">03</span><span class="mob-label">Portfolio</span><i class="fas fa-arrow-right mob-arrow"></i></a>
-    <a href="${ROOT}pages/pricing/"   class="mob-link"><span class="mob-num">04</span><span class="mob-label">Pricing</span><i class="fas fa-arrow-right mob-arrow"></i></a>
-    <a href="${ROOT}pages/about/"     class="mob-link"><span class="mob-num">05</span><span class="mob-label">About</span><i class="fas fa-arrow-right mob-arrow"></i></a>
-    <a href="${ROOT}pages/faq/"       class="mob-link"><span class="mob-num">06</span><span class="mob-label">FAQ</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/"                 class="mob-link"><span class="mob-num">01</span><span class="mob-label">Home</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/pages/services/"  class="mob-link"><span class="mob-num">02</span><span class="mob-label">Services</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/pages/portfolio/" class="mob-link"><span class="mob-num">03</span><span class="mob-label">Portfolio</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/pages/pricing/"   class="mob-link"><span class="mob-num">04</span><span class="mob-label">Pricing</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/pages/about/"     class="mob-link"><span class="mob-num">05</span><span class="mob-label">About</span><i class="fas fa-arrow-right mob-arrow"></i></a>
+    <a href="/pages/faq/"       class="mob-link"><span class="mob-num">06</span><span class="mob-label">FAQ</span><i class="fas fa-arrow-right mob-arrow"></i></a>
   </nav>
   <div class="mob-footer">
-    <a href="${ROOT}pages/contact/" class="btn btn-primary mob-cta">
+    <a href="/pages/contact/" class="btn btn-primary mob-cta">
       <i class="fas fa-rocket"></i> Get Started
     </a>
     <div class="mob-contacts">
@@ -69,7 +65,7 @@ document.getElementById('footer-placeholder').innerHTML = `
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="${ROOT}index.html" class="nav-brand">
+        <a href="/" class="nav-brand">
           <div class="nav-brand-mark">N</div>
           NEXO<span style="color:var(--purple-l)">SITES</span>
         </a>
@@ -84,22 +80,22 @@ document.getElementById('footer-placeholder').innerHTML = `
       <div class="footer-col">
         <h5>Navigation</h5>
         <ul>
-          <li><a href="${ROOT}index.html">Home</a></li>
-          <li><a href="${ROOT}pages/services/">Services</a></li>
-          <li><a href="${ROOT}pages/portfolio/">Portfolio</a></li>
-          <li><a href="${ROOT}pages/pricing/">Pricing</a></li>
-          <li><a href="${ROOT}pages/about/">About</a></li>
-          <li><a href="${ROOT}pages/faq/">FAQ</a></li>
-          <li><a href="${ROOT}pages/contact/">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/services/">Services</a></li>
+          <li><a href="/pages/portfolio/">Portfolio</a></li>
+          <li><a href="/pages/pricing/">Pricing</a></li>
+          <li><a href="/pages/about/">About</a></li>
+          <li><a href="/pages/faq/">FAQ</a></li>
+          <li><a href="/pages/contact/">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="${ROOT}pages/services/">Business Websites</a></li>
-          <li><a href="${ROOT}pages/services/">Portfolio Sites</a></li>
-          <li><a href="${ROOT}pages/services/">Landing Pages</a></li>
-          <li><a href="${ROOT}pages/services/">Updates &amp; Changes</a></li>
+          <li><a href="/pages/services/">Business Websites</a></li>
+          <li><a href="/pages/services/">Portfolio Sites</a></li>
+          <li><a href="/pages/services/">Landing Pages</a></li>
+          <li><a href="/pages/services/">Updates &amp; Changes</a></li>
         </ul>
       </div>
       <div class="footer-col">
