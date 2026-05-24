@@ -7,7 +7,7 @@ document.getElementById('nav-placeholder').innerHTML = `
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-brand" aria-label="NexoSites Home">
-      <div class="nav-brand-mark">N</div>
+      <img src="/assets/icons/logo.png" alt="NexoSites Logo" class="nav-brand-img"/>
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
     <ul class="nav-links" role="list">
@@ -30,7 +30,7 @@ document.getElementById('nav-placeholder').innerHTML = `
 <div class="mob-menu" id="mob-menu" role="dialog" aria-modal="true" aria-label="Navigation" inert>
   <div class="mob-top">
     <a href="/" class="nav-brand mob-brand">
-      <div class="nav-brand-mark">N</div>
+      <img src="/assets/icons/logo.png" alt="NexoSites Logo" class="nav-brand-img"/>
       NEXO<span style="color:var(--purple-l)">SITES</span>
     </a>
     <button class="mob-close" id="mob-close" aria-label="Close menu">
@@ -66,7 +66,7 @@ document.getElementById('footer-placeholder').innerHTML = `
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="nav-brand">
-          <div class="nav-brand-mark">N</div>
+          <img src="/assets/icons/logo.png" alt="NexoSites Logo" class="nav-brand-img"/>
           NEXO<span style="color:var(--purple-l)">SITES</span>
         </a>
         <p class="footer-brand-desc">Professional websites for businesses worldwide. Custom design, fast delivery, and ongoing support. You buy the domain — we handle everything else.</p>
