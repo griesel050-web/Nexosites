@@ -58,7 +58,12 @@
 <section class="section">
   <div class="wrap">
 
-    <!-- Cards -->
+    <!-- Localised currency badge -->
+    <div class="price-currency-badge" data-price-badge style="display:none;align-items:center;gap:.5rem;justify-content:center;margin-bottom:1.5rem;font-size:.85rem;color:var(--muted);background:rgba(108,71,255,.1);border:1px solid rgba(108,71,255,.3);border-radius:999px;padding:.4rem 1.2rem;width:fit-content;margin-left:auto;margin-right:auto">
+      <i class="fas fa-map-marker-alt" style="color:var(--purple-l)"></i>
+      <span></span>
+    </div>
+        <!-- Cards -->
     <div class="price-grid">
 
       <!-- New Website -->
@@ -69,8 +74,8 @@
         <!-- USD -->
         <div class="pc-price price-zar">
           <span class="pc-from">from</span>
-          <span class="pc-amount gradient-text">$55</span>
-          <span class="pc-to">up to $110</span>
+          <span class="pc-amount gradient-text" data-price="site-low">$55</span>
+          <span class="pc-to">up to <span data-price="site-high">$110</span></span>
         </div>
 
         <p class="pc-desc">
@@ -105,7 +110,7 @@
 
         <!-- USD -->
         <div class="pc-price price-usd">
-          <span class="pc-amount gradient-text">$16</span>
+          <span class="pc-amount gradient-text" data-price="update">$16</span>
           <span class="pc-to">per request</span>
         </div>
 
@@ -131,9 +136,9 @@
     </div>
 
     <!-- Info note -->
-    <div class="price-note reveal">
+    <div class="price-note reveal" data-price-note>
       <i class="fas fa-globe"></i>
-      <p>We work with clients <strong>worldwide</strong>. Payments accepted via PayPal or bank transfer (worldwide), PayPal, or bank transfer. USD pricing is approximate and may vary slightly with exchange rates. <a href="../contact/" style="color:var(--cyan)">Contact us</a> for a confirmed quote in your currency.</p>
+      <p>We work with clients <strong>worldwide</strong>. Payments accepted via PayPal or bank transfer. USD pricing is approximate and may vary slightly with exchange rates. <a href="../contact/" style="color:var(--cyan)">Contact us</a> for a confirmed quote in your currency.</p>
     </div>
   </div>
 </section>
@@ -217,6 +222,7 @@
 </section>
 </main>
 <div id="footer-placeholder"></div>
+<script src="../../pricing.js" defer></script>
 <script src="../../nav-footer.js" defer></script>
 <script src="../../main.js" defer></script>
 <script src="../faq/faq.js" defer></script>
