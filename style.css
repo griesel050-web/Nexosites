@@ -432,3 +432,10 @@ body.usd .price-usd { display:block }
   .wrap { padding:0 1rem }
   .btn  { padding:.75em 1.4em; font-size:.875rem }
 }
+
+.ad-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
