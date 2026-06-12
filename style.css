@@ -432,3 +432,7 @@ body.usd .price-usd { display:block }
   .wrap { padding:0 1rem }
   .btn  { padding:.75em 1.4em; font-size:.875rem }
 }
+.ad-container iframe {
+  display: block;
+  margin: 0 auto;
+}
