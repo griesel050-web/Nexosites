@@ -434,7 +434,6 @@ body.usd .price-usd { display:block }
 }
 
 .ad-banner {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
